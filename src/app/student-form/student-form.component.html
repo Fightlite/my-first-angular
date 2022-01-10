@@ -1,0 +1,58 @@
+<div class="container">
+    <h2 class="mt-3 text-center">Add a new student</h2>
+    <form [formGroup]="studentForm">
+        <mat-form-field class="form-header">
+            <mat-label>Code</mat-label>
+            <input matInput placeholder="" formControlName="code" required>
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Gender</mat-label>
+            <input matInput placeholder="" formControlName="gender" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="" formControlName="firstName" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="" formControlName="lastName" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Day of birth</mat-label>
+            <input matInput placeholder="" formControlName="dob" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="" formControlName="phone" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" formControlName="email" required />
+        </mat-form-field>
+        <mat-form-field class="form-header">
+            <mat-label>Picture</mat-label>
+            <input matInput placeholder="" formControlName="picture" required />
+        </mat-form-field>
+        <div class="d-flex justify-content-center align-items-center">
+            <button 
+                mat-raised-button 
+                type="submit" 
+                class="btn mr-2"
+                [disabled]="!studentForm.valid"
+                (click)="saveAndGoToList()"
+            >
+                Save
+            </button>
+            <button 
+                mat-raised-button 
+                type="submit" 
+                class="btn ml-2"
+                [disabled]="!studentForm.valid"
+                (click)="save()"
+                *ngIf="id==0"
+            >
+                Save & Add more
+            </button>
+        </div>
+    </form>
+</div>  
