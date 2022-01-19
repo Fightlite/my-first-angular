@@ -10,6 +10,8 @@ import { Student } from '../models/Student';
 })
 
 export class ServerHttpService {
+
+  // http options
   private httpOptions = {
     headers: new HttpHeaders({ 
       'Content-Type': 'application/json',
@@ -18,7 +20,7 @@ export class ServerHttpService {
 
   private REST_API_SERVER = 'http://localhost:3000'
 
-  constructor(private httpClient : HttpClient) {}
+  constructor(private httpClient : HttpClient) { }
 
   // create a method to get all of students
   public getStudents() {
