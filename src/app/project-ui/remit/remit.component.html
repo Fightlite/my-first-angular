@@ -1,0 +1,100 @@
+<div class="col my-2 rectangle-container">
+    <div class="text">
+        Remit To
+    </div>
+    <div class="hruler mb-md-3">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row mb-2 mr-md-2">
+                <label class="col-md-2 text-md-right label d-none d-md-block">ORGANIZATION</label>
+                <label class="col-md-2 label d-md-none ">COMPANY NAME</label>
+                <div class="col-md-10">
+                    <div class="row mr-md-2">
+                        <input type="text" class="col-md-11 col-9 text-input mr-0" value="{{remitTo.organization}}">
+                        <div class="col-md-1 col pt-2">
+                            <i-bs name="person-lines-fill" height="25" width="25" class="icon-person"></i-bs>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row mb-2 mr-md-2">
+                <label class="col-md-2 text-md-right label">ADDRESS</label>
+                <div class="col-md-10">
+                    <div class="row mr-md-2">
+                        <input type="text" class="col-md-11 text-input" value="{{remitTo.address}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row mb-2 mr-md-2">
+                <label class="col-md-2 text-md-right label">ADDRESS 2</label>
+                <div class="col-md-10">
+                    <div class="row mr-md-2">
+                        <input type="text" class="col-md-11 text-input" value="{{remitTo.address2}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row mb-2 mr-md-2">
+                <label class="col-md-2 text-md-right label">ZIP CODE</label>
+                <div class="col-md-10">
+                    <div class="row mr-md-2">
+                        <input type="text" class="col-md-3 text-input" value="{{remitTo.zipcode}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mb-2 mr-md-0">
+                <label for="city" class="col-md-4 text-md-right label">CITY</label>
+                <input id="city" type="text" class="col-md-8 text-input" value="{{remitTo.city}}">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="row mb-2 mr-md-0">
+                <label class="col-md-3 text-md-right label">STATE</label>
+                <select class="col-md-8 text-input">
+                    <option
+                        *ngFor="let state of states" 
+                        [value]="state" 
+                        [selected]="state == remitTo.state ? true : null"
+                    >
+                        {{state}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-12 d-none d-md-block">
+            <div class="row mb-2 mr-md-2">
+                <label for="email" class="col-md-2 text-md-right label">EMAIL</label>
+                <input id="email" type="text" class="col-md-6 text-input" value="{{remitTo.email}}">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row mb-3 mr-md-2">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <label for="email" class="col-md-5 text-md-right label">PHONE</label>
+                                <input id="email" type="text" class="col-md-7 text-input" value="{{remitTo.phone}}">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <label for="fax" class="col-md-3 text-md-right label">FAX</label>
+                                <input id="fax" type="text" class="col-md-9 text-input" value="{{remitTo.fax}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-remitchild></app-remitchild>
+</div>

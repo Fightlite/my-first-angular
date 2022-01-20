@@ -13,6 +13,17 @@ import {MaterialExampleModule} from '../material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from './register/register.component';
 import { EqualValidator } from './directives/equal-validator.directive';
+import { ProjectUiComponent } from './project-ui/project-ui.component';
+import { InformationComponent } from './project-ui/information/information.component';
+import { PaymentComponent } from './project-ui/payment/payment.component';
+import { RemitComponent } from './project-ui/remit/remit.component';
+import { TaxComponent } from './project-ui/tax/tax.component';
+import { AdditionalInformationComponent } from './project-ui/additional-information/additional-information.component';
+import { RemitchildComponent } from './project-ui/remit/remitchild/remitchild.component';
+
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { PaymentChildComponent } from './project-ui/payment/payment-child/payment-child.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +32,14 @@ import { EqualValidator } from './directives/equal-validator.directive';
     StudentFormComponent,
     RegisterComponent,
     EqualValidator,
+    ProjectUiComponent,
+    InformationComponent,
+    PaymentComponent,
+    RemitComponent,
+    TaxComponent,
+    AdditionalInformationComponent,
+    RemitchildComponent,
+    PaymentChildComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +53,9 @@ import { EqualValidator } from './directives/equal-validator.directive';
     FormsModule,
     HttpClientModule,
     MaterialExampleModule,
-    NgbModule
+    NgbModule,
+    BsDatepickerModule.forRoot(),
+    NgxBootstrapIconsModule.pick(allIcons),
   ],
   providers: [],
   bootstrap: [AppComponent]

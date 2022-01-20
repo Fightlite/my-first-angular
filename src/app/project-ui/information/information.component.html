@@ -1,0 +1,92 @@
+<div class="col my-2 rectangle-container">
+    <div class="text">
+        General Information
+    </div>
+    <div class="hruler mb-md-3">
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-6">
+            <div class="row mb-2">
+                <label class="col-md-4 text-md-right label">TYPE</label>
+                <select class="col-md-8 text-input">
+                    <option 
+                        *ngFor="let property of propertyTax"
+                        [value]="property"
+                        [selected]="property == generalInformation.type.toString() ? true : null"
+                    >
+                        {{property}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 col-6">
+            <div class="row mb-2 mr-md-2">
+                <label for="assessed-value" class="col-md-5 text-md-right label">ASSESSED VALUE</label>
+                <div class="col-md-7 text-input">
+                    <div class="d-flex money-input">
+                        <span>$</span>
+                        <input id="assessed-value" type="text" class="assess-value" value="{{generalInformation.value}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mb-2">
+                <label for="account" class="col-md-4 text-md-right label">ACCOUNT #</label>
+                <input id="account" type="text" class="col-md-8 text-input" value="{{generalInformation.account}}">
+            </div>
+        </div>
+        <div class="col-md-6 d-md-block d-sm-none">
+            <div class="row mb-2" style="height: 36">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mb-2">
+                <label for="parcel-id" class="col-md-4 text-md-right label">PARCEL ID #</label>
+                <input id="parcel-id" type="text" class="col-md-8 text-input" value="{{generalInformation.parcelId}}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mb-2 mr-md-2">
+                <label class="col-md-4 col-4 text-md-right label">COPY FROM</label>
+                <select class="col-md-8 col-7 text-input">
+                    <option 
+                        *ngFor="let copy of copyFrom"
+                        [value]="copy"
+                        [selected]="copy == generalInformation.copyFrom.toString() ? true : null"
+                    >
+                        {{copy}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row mb-2">
+                <div class="col-md-6 col-3 mb-2">
+                    <div class="row">
+                        <label for="map" class="col-md-8 text-md-right label">MAP</label>
+                        <input id="map" type="text" class="col-md-4 text-input" value="{{generalInformation.map}}">
+                    </div>
+                </div>
+                <div class="col-md-6 col-3 mb-2">
+                    <div class="row">
+                        <label for="ward" class="col-md-8 text-md-right label">WARD</label>
+                        <input id="ward" type="text" class="col-md-4 text-input" value="{{generalInformation.ward}}">
+                    </div>
+                </div>
+                <div class="col-md-6 col-3 mb-2">
+                    <div class="row">
+                        <label for="lot" class="col-md-8 text-md-right label">LOT</label>
+                        <input id="lot" type="text" class="col-md-4 text-input" value="{{generalInformation.lot}}">
+                    </div>
+                </div>
+                <div class="col-md-6 col-3 mb-2">
+                    <div class="row">
+                        <label for="block" class="col-md-8 text-md-right label">BLOCK</label>
+                        <input id="block" type="text" class="col-md-4 text-input" value="{{generalInformation.block}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

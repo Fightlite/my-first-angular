@@ -10,6 +10,17 @@ export class CommonService {
   // create a behavior subject to track the change of total students
   public totalStudents$ = new BehaviorSubject<number>(0);
 
+  public generalInformation: any = {
+    type: 1,
+    value: 30000,
+    account: 'ACB123',
+    parcelId: 'DA001',
+    copyFrom: 2,
+    map: 'MAP',
+    ward: 'WARD',
+    lot: 'LOT',
+    block: 'BLOCK'
+  };
   constructor() { }
 
   public setTotalStudents (total: number) {
@@ -24,4 +35,7 @@ export class CommonService {
     this.totalStudents$.next(this.totalStudents);
   }
 
+  public getGeneralInformation() {
+    return this.generalInformation;
+  }
 }

@@ -1,0 +1,13 @@
+.btn-calc {
+  color: #423e37;
+  font-size: 14px;
+  height: 30px;
+  background: #dbdbdb;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px 0px rgba(219, 220, 221, 1);
+}
+
+.btn-calc:hover {
+  background: #c1c1c1;
+}
