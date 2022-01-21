@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="table-users">
+    <table class="table-responsive-sm table">
+          <tr>
+              <th>Id</th>
+              <th>Code</th>        
+              <th>Gender</th>        
+              <th>First Name</th>        
+              <th>Last Name</th>         
+              <th>Day of birth</th>        
+              <th>Phone</th>        
+              <th>Email</th>        
+              <th>Picture</th>        
+              <th>Action</th>        
+          </tr>
+          <tr *ngFor="let student of students">
+            <td>{{ student?.id }}</td>
+            <td>{{ student?.code }}</td>
+            <td>{{ student?.gender }}</td>
+            <td>{{ student?.firstName }}</td>
+            <td>{{ student?.lastName }}</td>
+            <td>{{ student?.dob }}</td>
+            <td>{{ student?.phone }}</td>
+            <td>{{ student?.email }}</td>
+            <td align="center">
+              <img
+                *ngIf="student?.picture"
+                src="{{student?.picture}}"
+                class="student-image"
+              />
+            </td>
+            <td>
+                <mat-icon 
+                  style="cursor: pointer;"
+                  title="Click to delete student"
+                  (click)="deleteStudent(student.id)"
+                >
+                  clear
+                </mat-icon>
+                <mat-icon 
+                style="cursor: pointer;"
+                title="Click to edit student"
+                (click)="editStudent(student.id)"
+              >
+                edit
+              </mat-icon>
+            </td>
+          </tr>      
+    </table>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button mat-raised-button class="btn" (click)="addStudent()">
+      <mat-icon>add_box</mat-icon>
+      <span class="ml-2">Add a student</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #459299;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  width: 100%;
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-wrapper > button {
+  margin: 0 10px;
+}
+
+.btn {
+  background-color: rgba(21, 166, 166, 0.2);
+  color: #398b93;
+}
+
+.errorMessage {
+  color: red;
+}
